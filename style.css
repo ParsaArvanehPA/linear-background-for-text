@@ -1,0 +1,90 @@
+:root {
+    --clr-blue-7: hsl(216, 28%, 7%);
+    --clr-blue-15: hsl(215, 51%, 15%);
+    --clr-blue-61: hsla(215, 98%, 61%, .4);
+    --clr-green-37: hsla(175, 37%, 100%, .4);
+
+    --siz-lrg: 303px;
+    --siz-sml: 300px;
+
+    --size-font-4: 6rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--clr-blue-7);
+}
+
+p {
+    color: white;
+    font-size: var(--size-font-4);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+i {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+i:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    border: var(--siz-sml) solid var(--clr-blue-7);
+    border-top-color: var(--clr-blue-15);
+    transform: rotate(135deg) translate(0%, 71%);
+    z-index: 100;
+}
+
+i:nth-of-type(2) {
+    top: 0;
+    left: 0;
+    border: var(--siz-lrg) solid var(--clr-blue-61);
+    transform: rotate(135deg) translate(0%, 71%);
+}
+
+
+i:nth-of-type(3) {
+    bottom: 0;
+    right: 0;
+    border: var(--siz-sml) solid var(--clr-blue-7);
+    border-bottom-color: var(--clr-blue-15);
+    transform: rotate(135deg) translate(0%, -71%);
+    z-index: 100;
+}
+
+i:nth-of-type(4) {
+    bottom: 0;
+    right: 0;
+    border: var(--siz-lrg) solid var(--clr-blue-61);
+    transform: rotate(135deg) translate(0%, -71%);
+}
+
+p {
+    background: url("flower.png");
+    background-size: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px var(--clr-green-37);
+    -webkit-text-fill-color: transparent;
+}
+
+::selection {
+    background: var(--clr-green-37);
+}
